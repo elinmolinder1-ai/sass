@@ -5,6 +5,15 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 1rem;
+  }
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -194,6 +203,13 @@ body {
     gap: 0.5rem;
   }
 }
+@media (min-width: 1280px) {
+  .testimonials .testimonial {
+    padding: 0;
+    max-width: 530px;
+    margin: 0;
+  }
+}
 .testimonials .testimonial__image img {
   grid-area: 1;
   max-width: 73px;
@@ -204,6 +220,11 @@ body {
 @media (min-width: 800px) {
   .testimonials .testimonial__image img {
     display: block;
+    margin: 0 0 0 90px;
+  }
+}
+@media (min-width: 1280px) {
+  .testimonials .testimonial__image img {
     margin: 0 0 0 90px;
   }
 }
@@ -255,8 +276,7 @@ body {
   align-items: center;
   height: 100px;
 }
-
-.h2 {
+.challenges__text h2 {
   text-align: center;
 }
 
@@ -268,10 +288,20 @@ body {
   margin: 2rem auto;
   padding: 0 1rem;
 }
+@media (min-width: 800px) {
+  .challenge-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1027px) {
+  .challenge-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 
 .challenge-card {
   display: grid;
-  grid-template-areas: "image" "title" "text" "button";
+  grid-template-areas: "image" "title" "wrapper" "text" "button";
   grid-template-columns: 1fr;
   gap: 0.75rem;
   border: 1px solid #ccc;
@@ -282,37 +312,47 @@ body {
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
 }
-
+.challenge-card:nth-child(2), .challenge-card:nth-child(3) {
+  display: none;
+}
+@media (min-width: 800px) {
+  .challenge-card:nth-child(2) {
+    display: grid;
+    grid-template-areas: "image" "title" "text" "button";
+  }
+}
+@media (min-width: 1027px) {
+  .challenge-card:nth-child(3) {
+    display: grid;
+    grid-template-areas: "image" "title" "text" "button";
+  }
+}
 .challenge-card__title {
   grid-area: title;
   font-size: 28px;
   padding: 0 1rem;
   margin-top: 0.5rem;
 }
-
 .challenge-card__image {
   grid-area: image;
 }
-
 .challenge-card__image img {
   width: 100%;
   height: auto;
   display: block;
 }
-
 .challenge-card__wrapper {
+  grid-area: wrapper;
   display: grid;
   grid-template-areas: "rating participants";
   grid-template-columns: 1fr 1fr;
   margin: -40px 0 0 20px;
 }
-
 .challenge-card__rating {
   grid-area: rating;
   color: #E63946;
   font-size: 1.5rem;
 }
-
 .challenge-card__participants {
   grid-area: participants;
   font-weight: 600;
@@ -324,13 +364,11 @@ body {
   margin: 0.6rem 12rem 0.3rem 0;
   font-size: 12px;
 }
-
 .challenge-card__text {
   grid-area: text;
   font-size: 18px;
   padding: 0 2rem;
 }
-
 .challenge-card__button {
   grid-area: button;
   background-color: #E63946;
@@ -347,45 +385,51 @@ body {
   display: block;
 }
 
-.challenge-card:nth-child(2) {
-  display: none;
-}
-
-.challenge-card:nth-child(3) {
-  display: none;
-}
-
 .promo__buttons {
   display: flex;
-  justify-content: stretch;
-  /* centrerar horisontellt */
+  justify-content: space-between;
   margin-left: 10%;
   margin-right: 10%;
 }
+@media (min-width: 1027px) {
+  .promo {
+    display: flex;
+    justify-content: center;
+    max-height: 66px;
+    max-width: 308px;
+    gap: 1rem;
+    margin-left: 50%;
+    margin-right: 50%;
+  }
+}
 
+/*
 .button {
   padding: 1.5rem 1.2rem;
   border: none;
   cursor: pointer;
   margin: 0 auto;
-  /* 3rem space till vänster och höger */
   border-radius: 4px;
   width: 100%;
   max-width: 250px;
-}
-
+}TROR INTE ATT JAG BEHÖVER DENNA KOD*/
 .article {
   background-color: #011827;
   width: 100%;
 }
-
 .article__text {
   padding: 40px;
   color: white;
   text-align: center;
   font-size: 28px;
 }
-
+@media (min-width: 800px) {
+  .article__text {
+    max-width: 632px;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
 .article__wrapper__button {
   display: flex;
   justify-content: center;
@@ -393,7 +437,6 @@ body {
   align-items: center;
   margin-bottom: 0;
 }
-
 .article__button {
   border: 2px solid #8ACFE5;
   border-radius: 4px;
@@ -411,33 +454,82 @@ body {
   align-items: center;
 }
 
+@media (min-width: 800px) {
+  .promo-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+}
 .promo-section__image img {
   display: block;
   width: 100%;
   height: auto;
   margin: 0;
 }
-
+@media (min-width: 1280px) {
+  .promo-section__image img {
+    max-width: 640px;
+  }
+}
 .promo-section__content {
   margin: 24px 18px 10px 20px;
 }
-
+@media (min-width: 800px) {
+  .promo-section__content {
+    max-width: 416px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1280px) {
+  .promo-section__content {
+    max-width: 416px;
+    margin: 20px auto;
+  }
+}
 .promo-section__title {
   font-size: 32px;
 }
-
+@media (min-width: 800px) {
+  .promo-section__title {
+    font-size: 25px;
+  }
+}
+@media (min-width: 1280px) {
+  .promo-section__title {
+    font-size: 32px;
+  }
+}
 .promo-section__text {
   font-size: 24px;
 }
-
+@media (min-width: 800px) {
+  .promo-section__text {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1280px) {
+  .promo-section__text {
+    font-size: 24px;
+  }
+}
 .promo-section__button {
   background-color: red;
   border: none;
   border-radius: 4px;
   font-size: 24px;
   color: #fff;
-  font-style: bold;
-  padding: 10px 51px 10px 51px;
+  font-weight: bold;
+  padding: 10px 51px;
+  cursor: pointer;
+}
+@media (min-width: 800px) {
+  .promo-section--reverse .promo-section__image {
+    order: 2;
+  }
+  .promo-section--reverse .promo-section__content {
+    order: 1;
+  }
 }
 
 .footer {
@@ -449,171 +541,55 @@ body {
   flex-direction: column;
   gap: 2rem;
 }
-
-.footer__title {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  font-size: 1.1em;
-}
-
-.footer__text {
-  line-height: 1.5;
-  margin: 0;
-}
-
-.footer__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer__list li {
-  margin: 0.3rem 0;
-}
-
-.footer__list a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer__list a:hover {
-  text-decoration: underline;
-}
-
-/* ====== Gör detta när skärmen är större än 480px ====== */
 @media (min-width: 800px) {
-  .challenge-list {
-    grid-template-columns: 1fr 1fr;
-  }
-  .challenge-card:nth-child(2) {
-    display: grid;
-    grid-template-areas: "image" "title" "text" "button";
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    overflow: hidden;
-    background: #fff;
-    max-width: 380px;
-    margin: 0 auto;
-    font-family: "Roboto", sans-serif;
-  }
-  .article {
-    width: 100%;
-  }
-  .article__text {
-    max-width: 632px;
-    text-align: center;
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-  .promo-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-  }
-  .promo-section__picture img {
-    width: 100%;
-  }
-  .promo-section__content {
-    max-width: 416px;
-    margin: 0 auto;
-  }
-  .promo-section__title {
-    font-size: 25px;
-  }
-  .promo-section__text {
-    font-size: 20px;
-  }
-  .promo-section__button {
-    background-color: red;
-    border: none;
-    border-radius: 4px;
-    font-size: 24px;
-    color: #fff;
-    font-style: bold;
-    padding: 10px 51px 10px 51px;
-  }
-  .promo-section--reverse .promo-section__image {
-    order: 2;
-  }
-  .promo-section--reverse .promo-section__content {
-    order: 1;
-  }
   .footer {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
   }
+}
+@media (min-width: 800px) {
   .footer__section {
     margin-left: 30%;
     margin-top: 30px;
     margin-bottom: 90px;
     width: 100%;
   }
+}
+@media (min-width: 800px) {
   .footer__section--primary {
     margin-left: 80%;
     width: 100%;
     margin-top: 30px;
   }
+}
+.footer__title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.1em;
+}
+.footer__text {
+  line-height: 1.5;
+  margin: 0;
+}
+@media (min-width: 800px) {
   .footer__text {
     max-width: 416px;
   }
 }
-@media (min-width: 1027px) {
-  .challenge-list {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .promo__buttons {
-    display: flex;
-    justify-content: center;
-    max-height: 66px;
-    max-width: 308px;
-    gap: 1rem;
-    margin-left: 50%;
-    margin-right: 50%;
-  }
-  .challenge-card:nth-child(3) {
-    display: grid;
-    grid-template-areas: "image" "title" "text" "button";
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    overflow: hidden;
-    background: #fff;
-    max-width: 380px;
-    margin: 0 auto;
-    font-family: "Roboto", sans-serif;
-  }
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 1rem;
-  }
-  .testimonial {
-    padding: 0;
-    max-width: 530px;
-    margin: 0;
-  }
-  .testimonial__image img {
-    margin: 0 0 0 90px;
-  }
-  .promo-section__image img {
-    max-width: 640px;
-  }
-  .promo-section__content {
-    max-width: 416px;
-    margin: 20px auto;
-  }
-  .promo-section__title {
-    font-size: 32px;
-  }
-  .promo-section__text {
-    font-size: 24px;
-  }
+.footer__list li {
+  margin: 0.3rem 0;
+}
+.footer__list a {
+  color: white;
+  text-decoration: none;
+}
+.footer__list a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=main.css.map */
