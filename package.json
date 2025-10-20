@@ -1,0 +1,22 @@
+{
+  "name": "sass-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elinmolinder1-ai/sass.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elinmolinder1-ai/sass/issues"
+  },
+  "homepage": "https://github.com/elinmolinder1-ai/sass#readme",
+  "dependencies": {
+    "sass": "^1.93.2"
+  }
+}
