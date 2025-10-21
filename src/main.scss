@@ -49,10 +49,10 @@ body {
   &__logo {
     width: 100px;
     height: auto;
-
+/*
     @media screen and (min-width: $medium-screen-breakpoints) {
       grid-row: 1;
-    }
+    }*/
   }
 
   &__title {
@@ -115,15 +115,15 @@ body {
       display: block;
 
       @media (min-width: $medium-screen-breakpoints) {
-        height: 100%;
-        object-fit: cover;
+        height: auto;
+       
       }
     }
 
     @media (min-width: $medium-screen-breakpoints) {
       position: relative;
       width: 100%;
-      height: 100vh;
+    
       overflow: visible;
     }
   }
@@ -144,7 +144,7 @@ body {
     }
   }
 
-  &__on-site {
+  &__online {
     display: flex;
     justify-content: center;
     text-decoration: underline;
