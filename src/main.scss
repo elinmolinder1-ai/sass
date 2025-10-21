@@ -544,20 +544,19 @@ body {
   background-color: $color-primary;
   color:$color-light;
   font-size: 18px;
-  padding: 2rem;
+  padding: 6rem 0 0 4rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-top: 3rem;
 
   @media screen and (min-width:  $medium-screen-breakpoints) {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
   }
 
   &__section {
     @media screen and (min-width:  $medium-screen-breakpoints) {
-      margin-left: 30%;
-      margin-top: 30px;
       margin-bottom: 90px;
       width: 100%;
     }
@@ -565,9 +564,8 @@ body {
 
   &__section--primary {
     @media screen and (min-width:  $medium-screen-breakpoints) {
-      margin-left: 80%;
-      width: 100%;
-      margin-top: 30px;
+      margin-left: 40%;
+
     }
   }
 
