@@ -1,8 +1,14 @@
-$bg-color: rgb(30, 8, 36);
+//Färgvariabler
+$color-primary: #011827;
+$color-secondary: #8ACFE5;
+$color-accent: #E3170A;
+$color-light: #fff;
+$color-dark: #000;
+
 
 body {
   margin: 0;
-  background-color: #fff;
+  background-color: $color-light;
   font-family: "Roboto", sans-serif;
 }
 
@@ -10,7 +16,7 @@ body {
   @media screen and (min-width: 1280px) {
     max-width: 1280px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: $color-light;
     padding: 1rem;
   }
 }
@@ -20,8 +26,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #0b1622;
-  color: white;
+  background-color: $color-primary;
+  color: $color-light;
 
   @media screen and (min-width: 600px) {
     display: grid;
@@ -83,11 +89,11 @@ body {
 
     &:hover {
       text-decoration: underline;
-      color: #8ACFE5;
+      color: $color-secondary;
     }
 
     @media screen and (min-width: 800px) {
-      color: white;
+      color: $color-light;
       text-decoration: none;
       font-weight: 500;
     }
@@ -168,8 +174,8 @@ body {
 
   &--primary {
     font-weight: bold;
-    background-color: #8ACFE5;
-    color: #011827;
+    background-color: $color-secondary;
+    color: $color-primary;
   }
 
   &--secondary {
@@ -177,8 +183,8 @@ body {
 
     @media (min-width: 800px) {
       display: inline-flex; // inline-flex gör att innehållet centreras
-      background-color: #e63946;
-      color: #fff;
+      background-color: $color-accent;
+      color: $color-light;
     }
   }
 }
@@ -304,7 +310,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 6px;
   overflow: hidden;
-  background: #fff;
+  background: $color-light;
   max-width: 380px;
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
@@ -364,7 +370,7 @@ body {
 
   &__rating {
     grid-area: rating;
-    color: #E63946;
+    color: $color-accent;
     font-size: 1.5rem;
   }
 
@@ -385,8 +391,8 @@ body {
 
   &__button {
     grid-area: button;
-    background-color: #E63946;
-    color: #fff;
+    background-color: $color-accent;
+    color: $color-light;
     border: none;
     border-radius: 4px;
     width: 200px;
@@ -415,12 +421,12 @@ body {
 }
 
 .article {
-  background-color: #011827;
+  background-color: $color-primary;
   width: 100%;
 
   &__text {
     padding: 40px;
-    color: white;
+    color: $color-light;
     text-align: center;
     font-size: 28px;
 
@@ -440,12 +446,12 @@ body {
   }
 
   &__button {
-    border: 2px solid #8ACFE5;
+    border: 2px solid $color-secondary;
     border-radius: 4px;
     font-size: 24px;
     font-weight: bold;
-    background-color: #011827;
-    color: #8ACFE5;
+    background-color: $color-primary;
+    color: $color-secondary;
     margin-bottom: 80px;
     max-width: 308px;
     max-height: 66px;
@@ -471,7 +477,7 @@ body {
       height: auto;
       margin: 0;
 
-      @media screen and (min-width: 1280px) {
+      @media screen and (min-width: 1280px){
         max-width: 640px;
       }
     }
@@ -499,17 +505,16 @@ body {
   }
 
   &__button {
-    background-color: red;
+    background-color: $color-accent;
     border: none;
     border-radius: 4px;
     font-size: 24px;
-    color: #fff;
-    font-weight: bold; // rätt egenskap
+    color: $color-light;
+    font-weight: bold;
     padding: 10px 51px;
     cursor: pointer;
   }
 
-  // Modifierare
   &--reverse {
     @media screen and (min-width: 800px) {
       .promo-section__image {
@@ -524,8 +529,8 @@ body {
 }
 
 .footer {
-  background-color: #011827;
-  color: white;
+  background-color: $color-primary;
+  color:$color-light;
   font-size: 18px;
   padding: 2rem;
   display: flex;
@@ -544,7 +549,6 @@ body {
       margin-bottom: 90px;
       width: 100%;
     }
-
   }
 
   &__section--primary {
@@ -573,19 +577,17 @@ body {
   &__list {
     list-style: none;
     padding: 0;
-    margin: 0.3rem; 
+    margin: 0.3rem;
 
     li {
       a {
-        color: white;
+        color: $color-light;
         text-decoration: none;
 
         &:hover {
           text-decoration: underline;
         }
       }
-
-
     }
   }
 }
