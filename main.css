@@ -18,8 +18,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #0b1622;
-  color: white;
+  background-color: #011827;
+  color: #fff;
 }
 @media screen and (min-width: 600px) {
   .header {
@@ -81,7 +81,7 @@ body {
 }
 @media screen and (min-width: 800px) {
   .header__link {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-weight: 500;
   }
@@ -168,7 +168,7 @@ body {
 @media (min-width: 800px) {
   .button--secondary {
     display: inline-flex;
-    background-color: #e63946;
+    background-color: #E3170A;
     color: #fff;
   }
 }
@@ -330,7 +330,7 @@ body {
 }
 .challenge-card__rating {
   grid-area: rating;
-  color: #E63946;
+  color: #E3170A;
   font-size: 1.5rem;
 }
 .challenge-card__participants {
@@ -347,7 +347,7 @@ body {
 }
 .challenge-card__button {
   grid-area: button;
-  background-color: #E63946;
+  background-color: #E3170A;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -380,7 +380,7 @@ body {
 }
 .article__text {
   padding: 40px;
-  color: white;
+  color: #fff;
   text-align: center;
   font-size: 28px;
 }
@@ -454,7 +454,7 @@ body {
   font-size: 24px;
 }
 .promo-section__button {
-  background-color: red;
+  background-color: #E3170A;
   border: none;
   border-radius: 4px;
   font-size: 24px;
@@ -474,7 +474,7 @@ body {
 
 .footer {
   background-color: #011827;
-  color: white;
+  color: #fff;
   font-size: 18px;
   padding: 2rem;
   display: flex;
@@ -522,7 +522,7 @@ body {
   margin: 0.3rem;
 }
 .footer__list li a {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 .footer__list li a:hover {
