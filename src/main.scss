@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-  @media screen and  (min-width: 1280px) {
+  @media screen and (min-width: 1280px) {
     max-width: 1280px;
     margin: 0 auto;
     background-color: #fff;
@@ -23,14 +23,12 @@ body {
   background-color: #0b1622;
   color: white;
 
-  @media screen and  (min-width: 600px) {
+  @media screen and (min-width: 600px) {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     justify-content: center;
-    align-items: center;
   }
-
 
   &__logo-wrapper {
     display: flex;
@@ -41,7 +39,7 @@ body {
     width: 100px;
     height: auto;
 
-    @media screen and  (min-width: 800px) {
+    @media screen and (min-width: 800px) {
       grid-row: 1;
     }
   }
@@ -63,14 +61,15 @@ body {
   &__nav {
     display: none;
 
-    @media screen and  (min-width: 800px) {
+    @media screen and (min-width: 800px) {
       grid-row: 2;
       display: block;
     }
   }
 
   &__menu {
-    @media screen and  (min-width: 800px) {
+
+    @media screen and (min-width: 800px) {
       display: flex;
       gap: 9rem;
       list-style: none;
@@ -81,12 +80,13 @@ body {
   }
 
   &__link {
-    
-      &:hover {
-        text-decoration: underline;
-        color: #8ACFE5;
-      }
-    @media screen and  (min-width: 800px) {
+
+    &:hover {
+      text-decoration: underline;
+      color: #8ACFE5;
+    }
+
+    @media screen and (min-width: 800px) {
       color: white;
       text-decoration: none;
       font-weight: 500;
@@ -99,22 +99,21 @@ body {
   flex-direction: column;
 
   &__image {
-    @media screen and  (min-width: 800px) {
+    img {
+      width: 100%;
+      display: block;
+
+      @media (min-width: 800px) {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    @media (min-width: 800px) {
       position: relative;
       width: 100%;
       height: 100vh;
       overflow: visible;
-    }
-
-    img {
-      width: 100%;
-
-      @media screen and  (min-width: 800px) {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
     }
   }
 
@@ -124,7 +123,7 @@ body {
     gap: 0.5rem;
     margin-top: 2rem;
 
-    @media screen and  (min-width: 800px) {
+    @media (min-width: 800px) {
       position: absolute;
       bottom: -2rem;
       left: 50%;
@@ -132,47 +131,8 @@ body {
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
-
-    .button {
-      display: flex; // detta blir .hero__buttons .button
-    }
-  }
-}
-
-.button {
-  padding: 1.5rem 1.2rem;
-  border: none;
-  cursor: pointer;
-  margin: 0 auto;
-  border-radius: 4px;
-  width: 100%;
-  max-width: 250px;
-
-  @media screen and  (min-width: 800px) {
-    padding: 1.2rem 3rem;
-    font-size: 1.3rem;
-    border-radius: 6px;
-    min-width: 300px;
   }
 
-  &.button--primary {
-    font-weight: bold;
-    background-color: #8ACFE5;
-    color: #011827;
-  }
-
-  &.button--secondary {
-    display: none;
-
-    @media screen and  (min-width: 800px) {
-      display: inline-block;
-      background-color: #e63946;
-      color: #fff;
-    }
-  }
-}
-
-.hero {
   &__on-site {
     display: flex;
     justify-content: center;
@@ -181,8 +141,44 @@ body {
   }
 
   &__text {
-    @media screen and  (min-width: 800px) {
+    @media (min-width: 800px) {
       display: none;
+    }
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 1.2rem;
+  border: none;
+  cursor: pointer;
+  margin: 0 auto;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 250px;
+
+  @media (min-width: 800px) {
+    padding: 1.2rem 3rem;
+    font-size: 1.3rem;
+    border-radius: 6px;
+    min-width: 300px;
+  }
+
+  &--primary {
+    font-weight: bold;
+    background-color: #8ACFE5;
+    color: #011827;
+  }
+
+  &--secondary {
+    display: none;
+
+    @media (min-width: 800px) {
+      display: inline-flex; // inline-flex gör att innehållet centreras
+      background-color: #e63946;
+      color: #fff;
     }
   }
 }
@@ -191,7 +187,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
 
-  @media screen and  (min-width: 800px) {
+  @media screen and (min-width: 800px) {
     grid-template-columns: 1fr 1fr;
     margin: 100px 30px 0 30px;
   }
@@ -205,13 +201,12 @@ body {
     border-radius: 8px;
     margin: 1rem 0 1rem 0.9rem;
 
-    @media screen and  (min-width: 800px) {
+    @media screen and (min-width: 800px) {
       grid-template-columns: 1fr 2fr;
       justify-content: center;
-      gap: 0.5rem;
     }
 
-    @media screen and  (min-width: 1280px) {
+    @media screen and (min-width: 1280px) {
       padding: 0;
       max-width: 530px;
       margin: 0;
@@ -219,19 +214,12 @@ body {
 
     &__image {
       img {
-        grid-area: 1;
         max-width: 73px;
         border-radius: 50%;
-        display: flex;
-        align-items: flex-start;
+        display: block;
 
-        @media screen and  (min-width: 800px) {
-          display: block;
-          margin: 0 0 0 90px;
-        }
-
-        @media screen and  (min-width: 1280px) {
-          margin: 0 0 0 90px;
+        @media screen and (min-width: 800px) {
+          margin-left: 90px;
         }
       }
     }
@@ -243,14 +231,12 @@ body {
     &__quote {
       grid-area: 1;
       font-style: italic;
-      margin-left: 0;
       font-size: 24px;
-      margin-bottom: 0;
+      margin: 0;
 
-      @media screen and  (min-width: 800px) {
+      @media screen and (min-width: 800px) {
         margin-bottom: 1rem;
         max-width: 409px;
-        margin: 0;
       }
     }
 
@@ -259,31 +245,23 @@ body {
       color: #555;
       margin-top: 0;
 
-      @media screen and  (min-width: 800px) {
-        font-weight: 500;
-        color: #555;
+      @media screen and (min-width: 800px) {
         margin: 0;
+        font-weight: 400;
       }
     }
 
-    // Här är det rätt placerat och rätt stängt
     &:nth-child(2) {
       display: none;
 
-
-      @media screen and  (min-width: 800px) {
+      @media screen and (min-width: 800px) {
         display: grid;
-        grid-template-columns: 1fr 2fr;
-        justify-content: center;
-        align-items: center;
-        gap: 0.5rem;
       }
     }
   }
 }
 
 .challenges {
-
   &__text {
     display: flex;
     justify-content: center;
@@ -304,11 +282,11 @@ body {
   margin: 2rem auto;
   padding: 0 1rem;
 
-  @media screen and  (min-width: 800px) {
+  @media screen and (min-width: 800px) {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media screen and  (min-width: 1027px) {
+  @media screen and (min-width: 1027px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
@@ -337,7 +315,7 @@ body {
   }
 
   // Media query för desktop
-  @media screen and  (min-width: 800px) {
+  @media screen and (min-width: 800px) {
     &:nth-child(2) {
       display: grid;
       grid-template-areas:
@@ -348,7 +326,7 @@ body {
     }
   }
 
-  @media screen and  (min-width: 1027px) {
+  @media screen and (min-width: 1027px) {
     &:nth-child(3) {
       display: grid;
       grid-template-areas:
@@ -365,7 +343,6 @@ body {
     padding: 0 1rem;
     margin-top: 0.5rem;
   }
-
 
   &__image {
     grid-area: image;
@@ -392,14 +369,11 @@ body {
   }
 
   &__participants {
-    grid-area: participants;
+
     font-weight: 600;
-    display: block;
-    /* gör att den tar hela raden */
     width: 100%;
-    /* fyller hela grid-ytan */
     color: black;
-    margin: 0.6rem 12rem 0.3rem 0;
+    margin: 0.6rem 0 0.3rem;
     font-size: 12px;
   }
 
@@ -421,8 +395,6 @@ body {
     cursor: pointer;
     margin: 0 20px 0 170px;
     font-size: 16px;
-    text-align: center;
-    display: block;
   }
 }
 
@@ -430,32 +402,17 @@ body {
   &__buttons {
     display: flex;
     justify-content: space-between;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
+    margin: 0 10%;
 
-  @media screen and  (min-width: 1027px) {
-    display: flex;
-    justify-content: center;
-    max-height: 66px;
-    max-width: 308px;
-    gap: 1rem;
-    margin-left: 50%;
-    margin-right: 50%;
+    @media (min-width: 1027px) {
+      justify-content: center;
+      gap: 1rem;
+      max-height: 66px;
+      max-width: 308px;
+      margin: 0 auto; // centrera istället för margin-left/right: 50%
+    }
   }
 }
-
-/*
-.button {
-  padding: 1.5rem 1.2rem;
-  border: none;
-  cursor: pointer;
-  margin: 0 auto;
-  border-radius: 4px;
-  width: 100%;
-  max-width: 250px;
-}TROR INTE ATT JAG BEHÖVER DENNA KOD*/
-
 
 .article {
   background-color: #011827;
@@ -467,7 +424,7 @@ body {
     text-align: center;
     font-size: 28px;
 
-    @media screen and  (min-width: 800px) {
+    @media screen and (min-width: 800px) {
       max-width: 632px;
       margin-left: 20%;
       margin-right: 20%;
@@ -477,8 +434,8 @@ body {
   &__wrapper__button {
     display: flex;
     justify-content: center;
-    margin: 20px auto;
     align-items: center;
+    margin: 20px auto;
     margin-bottom: 0;
   }
 
@@ -501,8 +458,6 @@ body {
 }
 
 .promo-section {
-
-  // Layout för hela sektionen
   @media (min-width: 800px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -516,52 +471,31 @@ body {
       height: auto;
       margin: 0;
 
-      @media screen and  (min-width: 1280px) {
+      @media screen and (min-width: 1280px) {
         max-width: 640px;
       }
-
     }
   }
 
   &__content {
     margin: 24px 18px 10px 20px;
 
-    @media screen and  (min-width: 800px) {
+    @media screen and (min-width: 800px) {
       max-width: 416px;
       margin: 0 auto;
     }
 
-    @media screen and  (min-width: 1280px) {
-      max-width: 416px;
+    @media screen and (min-width: 1280px) {
       margin: 20px auto;
     }
-
   }
 
   &__title {
     font-size: 32px;
-
-    @media screen and  (min-width: 800px) {
-      font-size: 25px;
-    }
-
-    @media screen and  (min-width: 1280px) {
-      font-size: 32px;
-    }
-
   }
 
   &__text {
     font-size: 24px;
-
-    @media screen and  (min-width: 800px) {
-      font-size: 20px;
-
-    }
-
-    @media screen and  (min-width: 1280px) {
-      font-size: 24px;
-    }
   }
 
   &__button {
@@ -577,7 +511,7 @@ body {
 
   // Modifierare
   &--reverse {
-    @media screen and  (min-width: 800px) {
+    @media screen and (min-width: 800px) {
       .promo-section__image {
         order: 2;
       }
@@ -598,13 +532,13 @@ body {
   flex-direction: column;
   gap: 2rem;
 
-  @media screen and  (min-width: 800px) {
+  @media screen and (min-width: 800px) {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
   }
 
   &__section {
-    @media screen and  (min-width: 800px) {
+    @media screen and (min-width: 800px) {
       margin-left: 30%;
       margin-top: 30px;
       margin-bottom: 90px;
@@ -614,7 +548,7 @@ body {
   }
 
   &__section--primary {
-    @media screen and  (min-width: 800px) {
+    @media screen and (min-width: 800px) {
       margin-left: 80%;
       width: 100%;
       margin-top: 30px;
@@ -631,7 +565,7 @@ body {
     line-height: 1.5;
     margin: 0;
 
-    @media screen and  (min-width: 800px) {
+    @media screen and (min-width: 800px) {
       max-width: 416px;
     }
   }
@@ -639,19 +573,19 @@ body {
   &__list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0.3rem; 
 
     li {
-      margin: 0.3rem 0;
-    }
+      a {
+        color: white;
+        text-decoration: none;
 
-    a {
-      color: white;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
+        &:hover {
+          text-decoration: underline;
+        }
       }
+
+
     }
   }
 }
