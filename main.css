@@ -41,7 +41,7 @@ body {
 }
 .header__title {
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 700;
   width: 100%;
   max-width: 100px;
 }
@@ -80,7 +80,7 @@ body {
   .header__link {
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 700;
   }
 }
 
@@ -126,7 +126,7 @@ body {
   text-decoration: underline;
   font-size: 16px;
   color: #36769D;
-  font-weight: bold;
+  font-weight: 700;
 }
 @media (min-width: 800px) {
   .hero__text {
@@ -155,7 +155,7 @@ body {
   }
 }
 .button--primary {
-  font-weight: bold;
+  font-weight: 700;
   background-color: #8ACFE5;
   color: #011827;
 }
@@ -290,7 +290,6 @@ body {
   background: #fff;
   max-width: 380px;
   margin: 0 auto;
-  font-family: "Roboto", sans-serif;
 }
 .challenge-card:nth-child(2), .challenge-card:nth-child(3) {
   display: none;
@@ -334,7 +333,7 @@ body {
   font-size: 1.5rem;
 }
 .challenge-card__participants {
-  font-weight: 600;
+  font-weight: 400;
   width: 100%;
   color: black;
   margin: 0.6rem 0 0.3rem;
@@ -354,7 +353,6 @@ body {
   width: 200px;
   padding: 0.9rem 0;
   font-weight: 700;
-  cursor: pointer;
   margin: 0 20px 0 170px;
   font-size: 16px;
 }
@@ -402,7 +400,7 @@ body {
   border: 2px solid #8ACFE5;
   border-radius: 4px;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
   background-color: #011827;
   color: #8ACFE5;
   margin-bottom: 80px;
@@ -459,7 +457,7 @@ body {
   border-radius: 4px;
   font-size: 24px;
   color: #fff;
-  font-weight: bold;
+  font-weight: 700;
   padding: 10px 51px;
   cursor: pointer;
 }
@@ -500,7 +498,7 @@ body {
   }
 }
 .footer__title {
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 0.5rem;
   font-size: 1.1em;
 }

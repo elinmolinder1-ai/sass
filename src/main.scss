@@ -4,7 +4,7 @@
 body {
   margin: 0;
   background-color: $color-light;
-  font-family: "Roboto", sans-serif;
+  font-family: $font-base;
 }
 
 .container {
@@ -45,7 +45,7 @@ body {
 
   &__title {
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: $font-weight-bold;
     width: 100%;
     max-width: 100px;
 
@@ -88,7 +88,7 @@ body {
    @include respond(medium) {
       color: $color-light;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: $font-weight-bold;
     }
   }
 }
@@ -136,7 +136,7 @@ body {
     text-decoration: underline;
     font-size: 16px;
     color: #36769D;
-    font-weight: bold;
+    font-weight: $font-weight-bold;
   }
 
   &__text {
@@ -166,7 +166,7 @@ body {
   }
 
   &--primary {
-    font-weight: bold;
+    font-weight: $font-weight-bold;
     background-color: $color-secondary;
     color: $color-primary;
   }
@@ -249,7 +249,7 @@ body {
 
       @include respond(medium) {
         margin: 0;
-        font-weight: 400;
+        font-weight: $font-weight-regular;
       }
     }
 
@@ -309,7 +309,6 @@ body {
   background: $color-light;
   max-width: 380px;
   margin: 0 auto;
-  font-family: 'Roboto', sans-serif;
 
   &:nth-child(2),
   &:nth-child(3) {
@@ -370,7 +369,7 @@ body {
   }
 
   &__participants {
-    font-weight: 600;
+    font-weight: $font-weight-regular;
     width: 100%;
     color: black;
     margin: 0.6rem 0 0.3rem;
@@ -392,7 +391,6 @@ body {
     width: 200px;
     padding: 0.9rem 0;
     font-weight: 700;
-    cursor: pointer;
     margin: 0 20px 0 170px;
     font-size: 16px;
   }
@@ -443,7 +441,7 @@ body {
     border: 2px solid $color-secondary;
     border-radius: 4px;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
     background-color: $color-primary;
     color: $color-secondary;
     margin-bottom: 80px;
@@ -504,7 +502,7 @@ body {
     border-radius: 4px;
     font-size: 24px;
     color: $color-light;
-    font-weight: bold;
+    font-weight: 700;
     padding: 10px 51px;
     cursor: pointer;
   }
@@ -551,7 +549,7 @@ body {
   }
 
   &__title {
-    font-weight: bold;
+    font-weight: $font-weight-bold;
     margin-bottom: 0.5rem;
     font-size: 1.1em;
   }

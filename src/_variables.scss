@@ -1,3 +1,4 @@
+//breakpoints
 $breakpoints: (
   small: 600px,
   medium: 800px,
@@ -5,7 +6,15 @@ $breakpoints: (
   xl: 1280px
 );
 
+//color palette
 $color-primary: #011827;
 $color-secondary: #8ACFE5;
 $color-accent: #E3170A;
 $color-light: #fff;
+
+//base font
+$font-base: "Roboto", sans-serif;
+
+//font-weight
+$font-weight-regular: 400;
+$font-weight-bold: 700;
