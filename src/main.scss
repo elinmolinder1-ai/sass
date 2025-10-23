@@ -24,7 +24,7 @@ body {
   background-color: $color-primary;
   color: $color-light;
 
-  @include respond(small)  {
+  @include respond(small) {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
@@ -45,7 +45,7 @@ body {
 
   &__title {
     font-size: 1.1rem;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-title;
     width: 100%;
     max-width: 100px;
 
@@ -75,20 +75,17 @@ body {
       margin: 0;
       padding: 0;
       justify-content: center;
+      font-weight: $font-weight-nav;
     }
   }
 
   &__link {
+    color: $color-light;
+    text-decoration: none;
 
     &:hover {
       text-decoration: underline;
       color: $color-secondary;
-    }
-
-   @include respond(medium) {
-      color: $color-light;
-      text-decoration: none;
-      font-weight: $font-weight-bold;
     }
   }
 }
@@ -136,7 +133,7 @@ body {
     text-decoration: underline;
     font-size: 16px;
     color: #36769D;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-body-bold;
   }
 
   &__text {
@@ -166,7 +163,7 @@ body {
   }
 
   &--primary {
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-button;
     background-color: $color-secondary;
     color: $color-primary;
   }
@@ -186,7 +183,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
 
-  @include respond(medium){
+  @include respond(medium) {
     grid-template-columns: 1fr 1fr;
     margin: 100px 30px 0 30px;
   }
@@ -207,10 +204,9 @@ body {
 
     @include respond(large) {
       padding: 0;
-      width:100%;
+      width: 100%;
       margin: 0;
     }
-
 
     &__image {
       img {
@@ -219,7 +215,7 @@ body {
         display: inline-block;
         margin-top: -60px;
 
-        @include respond(medium){
+        @include respond(medium) {
           margin-left: 90px;
         }
       }
@@ -250,7 +246,7 @@ body {
 
       @include respond(medium) {
         margin: 0;
-        font-weight: $font-weight-regular;
+        font-weight: $font-weight-body-regular;
       }
     }
 
@@ -285,13 +281,16 @@ body {
   margin: 2rem auto;
   padding: 0 1rem;
 
- @include respond(medium) {
+  @include respond(medium) {
     grid-template-columns: 1fr 1fr;
   }
 
-  @include respond(large) {
+
+    @include respond(xl) {
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
   }
+
 }
 
 .challenge-card {
@@ -325,9 +324,12 @@ body {
         "text"
         "button";
     }
+    &:nth-child(3) {
+    display: none;
+  }
   }
 
-  @include respond(large) {
+  @include respond(xl) {
     &:nth-child(3) {
       display: grid;
       grid-template-areas:
@@ -370,7 +372,7 @@ body {
   }
 
   &__participants {
-    font-weight: $font-weight-regular;
+    font-weight: $font-weight-body-regular;
     width: 100%;
     color: black;
     margin: 0.6rem 0 0.3rem;
@@ -403,7 +405,7 @@ body {
     justify-content: space-between;
     margin: 0 10%;
 
-    @include respond(large){
+    @include respond(large) {
       justify-content: center;
       gap: 1rem;
       max-height: 66px;
@@ -470,7 +472,7 @@ body {
       height: auto;
       margin: 0;
 
-      @include respond(xl){
+      @include respond(xl) {
         max-width: 640px;
       }
     }
@@ -550,7 +552,7 @@ body {
   }
 
   &__title {
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-title;
     margin-bottom: 0.5rem;
     font-size: 1.1em;
   }
