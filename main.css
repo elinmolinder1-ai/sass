@@ -326,7 +326,7 @@ body {
   grid-area: wrapper;
   display: grid;
   grid-template-areas: "rating participants";
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr auto;
   margin: -40px 0 0 20px;
 }
 .challenge-card__rating {
@@ -338,8 +338,13 @@ body {
   font-weight: 400;
   width: 100%;
   color: black;
-  margin: 0.6rem 0 0.3rem;
   font-size: 12px;
+  margin-right: 180px;
+}
+@media (min-width: 800px) {
+  .challenge-card__participants {
+    margin-right: 20px;
+  }
 }
 .challenge-card__text {
   grid-area: text;
