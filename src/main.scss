@@ -213,9 +213,9 @@ body {
         max-width: 73px;
         border-radius: 50%;
         display: inline-block;
-        margin-top: -60px;
+        margin-top: -20px;
 
-        @include respond(medium) {
+        @include respond(large) {
           margin-left: 90px;
         }
       }
@@ -235,7 +235,9 @@ body {
 
       @include respond(medium) {
         margin-bottom: 1rem;
-        max-width: 409px;
+        max-width: 509px;
+        margin-right: 0;
+        margin-left: 0;
       }
     }
 
@@ -250,7 +252,7 @@ body {
       }
     }
 
-    &:nth-child(2) {
+    &hidden--md {
       display: none;
 
       @include respond(medium) {
@@ -258,333 +260,322 @@ body {
       }
     }
   }
-}
 
-.challenges {
-  &__text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-
-    h2 {
-      text-align: center;
-    }
-  }
-}
-
-.challenge-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-
-  @include respond(medium) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-
-  @include respond(xl) {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-  }
-
-}
-
-.challenge-card {
-  display: grid;
-  grid-template-areas:
-    "image"
-    "title"
-    "wrapper"
-    "text"
-    "button";
-  grid-template-columns: 1fr;
-  gap: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  overflow: hidden;
-  background: $color-light;
-  max-width: 380px;
-  margin: 0 auto;
-
-  &:nth-child(2),
-  &:nth-child(3) {
-    display: none;
-  }
-
-  @include respond(medium) {
-    &:nth-child(2) {
-      display: grid;
-      grid-template-areas:
-        "image"
-        "title"
-        "text"
-        "button";
-    }
-
-    &:nth-child(3) {
-      display: none;
-    }
-  }
-
-  @include respond(xl) {
-    &:nth-child(3) {
-      display: grid;
-      grid-template-areas:
-        "image"
-        "title"
-        "text"
-        "button";
-    }
-  }
-
-  &__title {
-    grid-area: title;
-    font-size: 28px;
-    padding: 0 1rem;
-    margin-top: 0.5rem;
-  }
-
-  &__image {
-    grid-area: image;
-
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-  }
-
-  &__wrapper {
-    grid-area: wrapper;
-    display: grid;
-    grid-template-areas: "rating participants";
-    grid-template-columns: 1fr auto;
-    margin: -40px 0 0 20px;
-  }
-
-  &__rating {
-    grid-area: rating;
-    color: $color-accent;
-    font-size: 1.5rem;
-  }
-
-  &__participants {
-    font-weight: $font-weight-body-regular;
-    width: 100%;
-    color: black;
-    font-size: 12px;
-    margin-right: 180px;
-
-    @include respond(medium) {
-      margin-right: 20px;
-    }
-  }
-
-  &__text {
-    grid-area: text;
-    font-size: 18px;
-    padding: 0 2rem;
-  }
-
-  &__button {
-    grid-area: button;
-    background-color: $color-accent;
-    color: $color-light;
-    border: none;
-    border-radius: 4px;
-    width: 200px;
-    padding: 0.9rem 0;
-    font-weight: 700;
-    margin: 0 20px 0 170px;
-    font-size: 16px;
-  }
-}
-
-.promo {
-  &__buttons {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 10%;
-
-    @include respond(large) {
+  .challenges {
+    &__text {
+      display: flex;
       justify-content: center;
-      gap: 1rem;
-      max-height: 66px;
-      max-width: 308px;
-      margin: 0 auto;
-    }
-  }
-}
+      align-items: center;
+      height: 100px;
 
-.article {
-  background-color: $color-primary;
-  width: 100%;
-
-  &__text {
-    padding: 40px;
-    color: $color-light;
-    text-align: center;
-    font-size: 28px;
-
-    @include respond(medium) {
-      max-width: 632px;
-      margin-left: 20%;
-      margin-right: 20%;
-    }
-  }
-
-  &__wrapper__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
-    margin-bottom: 0;
-  }
-
-  &__button {
-    border: 2px solid $color-secondary;
-    border-radius: 4px;
-    font-size: 24px;
-    font-weight: 700;
-    background-color: $color-primary;
-    color: $color-secondary;
-    margin-bottom: 80px;
-    max-width: 308px;
-    max-height: 66px;
-    width: 60%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-.promo-section {
-  @include respond(medium) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-  }
-
-  &__image {
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-      margin: 0;
-
-      @include respond(xl) {
-        max-width: 640px;
+      h2 {
+        text-align: center;
       }
     }
   }
 
-  &__content {
-    margin: 24px 18px 10px 20px;
+  .challenge-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 
     @include respond(medium) {
-      max-width: 416px;
-      margin: 0 auto;
+      grid-template-columns: 1fr 1fr;
     }
+
 
     @include respond(xl) {
-      margin: 20px auto;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
     }
+
   }
 
-  &__title {
-    font-size: 32px;
-  }
-
-  &__text {
-    font-size: 24px;
-  }
-
-  &__button {
-    background-color: $color-accent;
-    border: none;
-    border-radius: 4px;
-    font-size: 24px;
-    color: $color-light;
-    font-weight: 700;
-    padding: 10px 51px;
-    cursor: pointer;
-  }
-
-  &--reverse {
-    @include respond(medium) {
-      .promo-section__image {
-        order: 2;
-      }
-
-      .promo-section__content {
-        order: 1;
-      }
-    }
-  }
-}
-
-.footer {
-  background-color: $color-primary;
-  color: $color-light;
-  font-size: 18px;
-  padding: 6rem 0 0 4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 3rem;
-
-  @include respond(medium) {
+  .challenge-card {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-  }
+    grid-template-areas:
+      "image"
+      "title"
+      "wrapper"
+      "text"
+      "button";
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+    background: $color-light;
+    max-width: 380px;
+    margin: 0 auto;
 
-  &__section {
-    @include respond(medium) {
-      margin-bottom: 90px;
+
+
+    &__title {
+      grid-area: title;
+      font-size: 28px;
+      padding: 0 1rem;
+      margin-top: 0.5rem;
+    }
+
+    &__image {
+      grid-area: image;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    &__wrapper {
+      grid-area: wrapper;
+      display: grid;
+      grid-template-areas: "rating participants";
+      grid-template-columns: 1fr auto;
+      margin: -40px 0 0 20px;
+    }
+
+    &__rating {
+      grid-area: rating;
+      color: $color-accent;
+      font-size: 1.5rem;
+    }
+
+    &__participants {
+      font-weight: $font-weight-body-regular;
       width: 100%;
+      color: black;
+      font-size: 12px;
+      margin-right: 180px;
+
+      @include respond(medium) {
+        margin-right: 20px;
+      }
     }
+
+    &__text {
+      grid-area: text;
+      font-size: 18px;
+      padding: 0 2rem;
+    }
+
+    &__button {
+      grid-area: button;
+      background-color: $color-accent;
+      color: $color-light;
+      border: none;
+      border-radius: 4px;
+      width: 200px;
+      padding: 0.9rem 0;
+      font-weight: 700;
+      margin: 0 20px 0 170px;
+      font-size: 16px;
+    }
+
+
   }
 
-  &__section--primary {
+  .challenge-card--hidden-md {
+    display: none;
+
     @include respond(medium) {
-      margin-left: 40%;
+      display: grid; // eller flex beroende på din layout
     }
   }
 
-  &__title {
-    font-weight: $font-weight-title;
-    margin-bottom: 0.5rem;
-    font-size: 1.1em;
+  .challenge-card--hidden-xl {
+    display: none;
+
+    @include respond(xl) {
+      display: grid;
+    }
   }
 
-  &__text {
-    line-height: 1.5;
-    margin: 0;
 
+  .promo {
+    &__buttons {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 10%;
+
+      @include respond(large) {
+        justify-content: center;
+        gap: 1rem;
+        max-height: 66px;
+        max-width: 308px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .article {
+    background-color: $color-primary;
+    width: 100%;
+
+    &__text {
+      padding: 40px;
+      color: $color-light;
+      text-align: center;
+      font-size: 28px;
+
+      @include respond(medium) {
+        max-width: 632px;
+        margin-left: 20%;
+        margin-right: 20%;
+      }
+    }
+
+    &__wrapper__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+      margin-bottom: 0;
+    }
+
+    &__button {
+      border: 2px solid $color-secondary;
+      border-radius: 4px;
+      font-size: 24px;
+      font-weight: 700;
+      background-color: $color-primary;
+      color: $color-secondary;
+      margin-bottom: 80px;
+      max-width: 308px;
+      max-height: 66px;
+      width: 60%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .promo-section {
     @include respond(medium) {
-      max-width: 416px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
     }
-  }
 
-  &__list {
-    list-style: none;
-    padding: 0;
-    margin: 0.3rem;
+    &__image {
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0;
 
-    li {
-      a {
-        color: $color-light;
-        text-decoration: none;
+        @include respond(xl) {
+          max-width: 640px;
+        }
+      }
+    }
 
-        &:hover {
-          text-decoration: underline;
+    &__content {
+      margin: 24px 18px 10px 20px;
+
+      @include respond(medium) {
+        max-width: 416px;
+        margin: 0 auto;
+      }
+
+      @include respond(xl) {
+        margin: 20px auto;
+      }
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__text {
+      font-size: 24px;
+    }
+
+    &__button {
+      background-color: $color-accent;
+      border: none;
+      border-radius: 4px;
+      font-size: 24px;
+      color: $color-light;
+      font-weight: 700;
+      padding: 10px 51px;
+      cursor: pointer;
+    }
+
+    &--reverse {
+      @include respond(medium) {
+        .promo-section__image {
+          order: 2;
+        }
+
+        .promo-section__content {
+          order: 1;
         }
       }
     }
   }
-}
+
+  .footer {
+    background-color: $color-primary;
+    color: $color-light;
+    font-size: 18px;
+    padding: 6rem 0 0 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+
+    @include respond(medium) {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    &__section {
+      @include respond(medium) {
+        margin-bottom: 90px;
+        width: 100%;
+      }
+    }
+
+    &__section--primary {
+      @include respond(medium) {
+        margin-left: 40%;
+      }
+    }
+
+    &__title {
+      font-weight: $font-weight-title;
+      margin-bottom: 0.5rem;
+      font-size: 1.1em;
+    }
+
+    &__text {
+      line-height: 1.5;
+      margin: 0;
+
+      @include respond(medium) {
+        max-width: 416px;
+      }
+    }
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 0.3rem;
+
+      li {
+        a {
+          color: $color-light;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
