@@ -286,7 +286,7 @@ body {
   }
 
 
-    @include respond(xl) {
+  @include respond(xl) {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
   }
@@ -324,9 +324,10 @@ body {
         "text"
         "button";
     }
+
     &:nth-child(3) {
-    display: none;
-  }
+      display: none;
+    }
   }
 
   @include respond(xl) {
