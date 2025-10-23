@@ -15,6 +15,13 @@ $color-light: #fff;
 //base font
 $font-base: "Roboto", sans-serif;
 
-//font-weight
+//font-weight tokens
 $font-weight-regular: 400;
 $font-weight-bold: 700;
+
+//font-weight tokens
+$font-weight-body-bold:$font-weight-bold;
+$font-weight-body-regular:$font-weight-regular;
+$font-weight-title:$font-weight-bold;
+$font-weight-nav:$font-weight-bold;
+$font-weight-button:$font-weight-bold;
