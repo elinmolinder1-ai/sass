@@ -94,12 +94,20 @@ body {
   flex-direction: column;
 
   &__image {
+    @include respond(medium) {
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
     img {
       width: 100%;
       display: block;
 
       @include respond(medium) {
-        height: auto;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
       }
     }
 
@@ -156,16 +164,18 @@ body {
   max-width: 250px;
 
   @include respond(medium) {
-    padding: 1.2rem 3rem;
+
+    padding: 0.9rem 0;
     font-size: 1.3rem;
     border-radius: 6px;
-    min-width: 300px;
+    min-width: 290px;
   }
 
   &--primary {
     font-weight: $font-weight-button;
     background-color: $color-secondary;
     color: $color-primary;
+    text-decoration: none;
   }
 
   &--secondary {
@@ -175,6 +185,8 @@ body {
       display: inline-flex;
       background-color: $color-accent;
       color: $color-light;
+      text-decoration: none;
+      font-weight: $font-weight-button;
     }
   }
 }
@@ -272,6 +284,7 @@ body {
 
     h2 {
       text-align: center;
+      font-weight: $font-weight-body-regular;
     }
   }
 }
@@ -377,6 +390,7 @@ body {
   }
 
   &__button {
+    display: inline-block;
     grid-area: button;
     background-color: $color-accent;
     color: $color-light;
@@ -385,23 +399,22 @@ body {
     width: 200px;
     padding: 0.9rem 0;
     font-weight: 700;
-    margin: 0 20px 0 170px;
+    margin: 0 20px -10px 170px;
     font-size: 16px;
+    text-decoration: none;
+    text-align: center;
   }
 }
 
 .promo {
   &__buttons {
     display: flex;
-    justify-content: space-between;
-    margin: 0 10%;
+    justify-content: center;
 
     @include respond(large) {
       justify-content: center;
       gap: 1rem;
-      max-height: 66px;
-      max-width: 308px;
-      margin: 0 auto;
+      margin: 80px 300px;
     }
   }
 }

@@ -86,13 +86,22 @@ body {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 800px) {
+  .hero__image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+}
 .hero__image img {
   width: 100%;
   display: block;
 }
 @media (min-width: 800px) {
   .hero__image img {
-    height: auto;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 }
 @media (min-width: 800px) {
@@ -147,16 +156,17 @@ body {
 }
 @media (min-width: 800px) {
   .button {
-    padding: 1.2rem 3rem;
+    padding: 0.9rem 0;
     font-size: 1.3rem;
     border-radius: 6px;
-    min-width: 300px;
+    min-width: 290px;
   }
 }
 .button--primary {
   font-weight: 700;
   background-color: #8ACFE5;
   color: #011827;
+  text-decoration: none;
 }
 .button--secondary {
   display: none;
@@ -166,6 +176,8 @@ body {
     display: inline-flex;
     background-color: #E3170A;
     color: #fff;
+    text-decoration: none;
+    font-weight: 700;
   }
 }
 
@@ -260,6 +272,7 @@ body {
 }
 .challenges__text h2 {
   text-align: center;
+  font-weight: 400;
 }
 
 .challenge-list {
@@ -354,6 +367,7 @@ body {
   padding: 0 2rem;
 }
 .challenge-card__button {
+  display: inline-block;
   grid-area: button;
   background-color: #E3170A;
   color: #fff;
@@ -362,22 +376,21 @@ body {
   width: 200px;
   padding: 0.9rem 0;
   font-weight: 700;
-  margin: 0 20px 0 170px;
+  margin: 0 20px -10px 170px;
   font-size: 16px;
+  text-decoration: none;
+  text-align: center;
 }
 
 .promo__buttons {
   display: flex;
-  justify-content: space-between;
-  margin: 0 10%;
+  justify-content: center;
 }
 @media (min-width: 1027px) {
   .promo__buttons {
     justify-content: center;
     gap: 1rem;
-    max-height: 66px;
-    max-width: 308px;
-    margin: 0 auto;
+    margin: 80px 300px;
   }
 }
 
