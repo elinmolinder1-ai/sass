@@ -241,24 +241,26 @@ body {
     font-weight: 400;
   }
 }
-.testimonials .testimonialhidden--md {
+.testimonials .testimonial--hidden-md {
   display: none;
 }
 @media (min-width: 800px) {
-  .testimonials .testimonialhidden--md {
+  .testimonials .testimonial--hidden-md {
     display: grid;
   }
 }
-.testimonials .challenges__text {
+
+.challenges__text {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100px;
 }
-.testimonials .challenges__text h2 {
+.challenges__text h2 {
   text-align: center;
 }
-.testimonials .challenge-list {
+
+.challenge-list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -267,17 +269,18 @@ body {
   padding: 0 1rem;
 }
 @media (min-width: 800px) {
-  .testimonials .challenge-list {
+  .challenge-list {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media (min-width: 1280px) {
-  .testimonials .challenge-list {
+  .challenge-list {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
   }
 }
-.testimonials .challenge-card {
+
+.challenge-card {
   display: grid;
   grid-template-areas: "image" "title" "wrapper" "text" "button";
   grid-template-columns: 1fr;
@@ -289,33 +292,49 @@ body {
   max-width: 380px;
   margin: 0 auto;
 }
-.testimonials .challenge-card__title {
+.challenge-card--hidden-md {
+  display: none;
+}
+@media (min-width: 800px) {
+  .challenge-card--hidden-md {
+    display: grid;
+  }
+}
+.challenge-card--hidden-xl {
+  display: none;
+}
+@media (min-width: 1280px) {
+  .challenge-card--hidden-xl {
+    display: grid;
+  }
+}
+.challenge-card__title {
   grid-area: title;
   font-size: 28px;
   padding: 0 1rem;
   margin-top: 0.5rem;
 }
-.testimonials .challenge-card__image {
+.challenge-card__image {
   grid-area: image;
 }
-.testimonials .challenge-card__image img {
+.challenge-card__image img {
   width: 100%;
   height: auto;
   display: block;
 }
-.testimonials .challenge-card__wrapper {
+.challenge-card__wrapper {
   grid-area: wrapper;
   display: grid;
   grid-template-areas: "rating participants";
   grid-template-columns: 1fr auto;
   margin: -40px 0 0 20px;
 }
-.testimonials .challenge-card__rating {
+.challenge-card__rating {
   grid-area: rating;
   color: #E3170A;
   font-size: 1.5rem;
 }
-.testimonials .challenge-card__participants {
+.challenge-card__participants {
   font-weight: 400;
   width: 100%;
   color: black;
@@ -323,16 +342,16 @@ body {
   margin-right: 180px;
 }
 @media (min-width: 800px) {
-  .testimonials .challenge-card__participants {
+  .challenge-card__participants {
     margin-right: 20px;
   }
 }
-.testimonials .challenge-card__text {
+.challenge-card__text {
   grid-area: text;
   font-size: 18px;
   padding: 0 2rem;
 }
-.testimonials .challenge-card__button {
+.challenge-card__button {
   grid-area: button;
   background-color: #E3170A;
   color: #fff;
@@ -344,29 +363,14 @@ body {
   margin: 0 20px 0 170px;
   font-size: 16px;
 }
-.testimonials .challenge-card--hidden-md {
-  display: none;
-}
-@media (min-width: 800px) {
-  .testimonials .challenge-card--hidden-md {
-    display: grid;
-  }
-}
-.testimonials .challenge-card--hidden-xl {
-  display: none;
-}
-@media (min-width: 1280px) {
-  .testimonials .challenge-card--hidden-xl {
-    display: grid;
-  }
-}
-.testimonials .promo__buttons {
+
+.promo__buttons {
   display: flex;
   justify-content: space-between;
   margin: 0 10%;
 }
 @media (min-width: 1027px) {
-  .testimonials .promo__buttons {
+  .promo__buttons {
     justify-content: center;
     gap: 1rem;
     max-height: 66px;
@@ -374,31 +378,32 @@ body {
     margin: 0 auto;
   }
 }
-.testimonials .article {
+
+.article {
   background-color: #011827;
   width: 100%;
 }
-.testimonials .article__text {
+.article__text {
   padding: 40px;
   color: #fff;
   text-align: center;
   font-size: 28px;
 }
 @media (min-width: 800px) {
-  .testimonials .article__text {
+  .article__text {
     max-width: 632px;
     margin-left: 20%;
     margin-right: 20%;
   }
 }
-.testimonials .article__wrapper__button {
+.article__wrapper__button {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px auto;
   margin-bottom: 0;
 }
-.testimonials .article__button {
+.article__button {
   border: 2px solid #8ACFE5;
   border-radius: 4px;
   font-size: 24px;
@@ -414,45 +419,46 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 @media (min-width: 800px) {
-  .testimonials .promo-section {
+  .promo-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
   }
 }
-.testimonials .promo-section__image img {
+.promo-section__image img {
   display: block;
   width: 100%;
   height: auto;
   margin: 0;
 }
 @media (min-width: 1280px) {
-  .testimonials .promo-section__image img {
+  .promo-section__image img {
     max-width: 640px;
   }
 }
-.testimonials .promo-section__content {
+.promo-section__content {
   margin: 24px 18px 10px 20px;
 }
 @media (min-width: 800px) {
-  .testimonials .promo-section__content {
+  .promo-section__content {
     max-width: 416px;
     margin: 0 auto;
   }
 }
 @media (min-width: 1280px) {
-  .testimonials .promo-section__content {
+  .promo-section__content {
     margin: 20px auto;
   }
 }
-.testimonials .promo-section__title {
+.promo-section__title {
   font-size: 32px;
 }
-.testimonials .promo-section__text {
+.promo-section__text {
   font-size: 24px;
 }
-.testimonials .promo-section__button {
+.promo-section__button {
   background-color: #E3170A;
   border: none;
   border-radius: 4px;
@@ -463,14 +469,15 @@ body {
   cursor: pointer;
 }
 @media (min-width: 800px) {
-  .testimonials .promo-section--reverse .promo-section__image {
+  .promo-section--reverse .promo-section__image {
     order: 2;
   }
-  .testimonials .promo-section--reverse .promo-section__content {
+  .promo-section--reverse .promo-section__content {
     order: 1;
   }
 }
-.testimonials .footer {
+
+.footer {
   background-color: #011827;
   color: #fff;
   font-size: 18px;
@@ -481,46 +488,46 @@ body {
   margin-top: 3rem;
 }
 @media (min-width: 800px) {
-  .testimonials .footer {
+  .footer {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
   }
 }
 @media (min-width: 800px) {
-  .testimonials .footer__section {
+  .footer__section {
     margin-bottom: 90px;
     width: 100%;
   }
 }
 @media (min-width: 800px) {
-  .testimonials .footer__section--primary {
+  .footer__section--primary {
     margin-left: 40%;
   }
 }
-.testimonials .footer__title {
+.footer__title {
   font-weight: 700;
   margin-bottom: 0.5rem;
   font-size: 1.1em;
 }
-.testimonials .footer__text {
+.footer__text {
   line-height: 1.5;
   margin: 0;
 }
 @media (min-width: 800px) {
-  .testimonials .footer__text {
+  .footer__text {
     max-width: 416px;
   }
 }
-.testimonials .footer__list {
+.footer__list {
   list-style: none;
   padding: 0;
   margin: 0.3rem;
 }
-.testimonials .footer__list li a {
+.footer__list li a {
   color: #fff;
   text-decoration: none;
 }
-.testimonials .footer__list li a:hover {
+.footer__list li a:hover {
   text-decoration: underline;
 }
 
