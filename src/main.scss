@@ -2,17 +2,17 @@
 @import "mixins";
 
 body {
-  margin: 0;
   background-color: $color-light;
   font-family: $font-base;
+  margin: 0;
 }
 
 .container {
   @include respond(xl) {
-    max-width: 1280px;
-    margin: 0 auto;
     background-color: $color-light;
     padding: 1rem;
+    margin: 0 auto;
+    max-width: 1280px;
   }
 }
 
@@ -20,9 +20,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
   background-color: $color-primary;
   color: $color-light;
+  padding: 1rem;
 
   @include respond(small) {
     display: grid;
@@ -38,9 +38,9 @@ body {
   }
 
   &__logo {
+    margin-left: 15px;
     width: 100px;
     height: auto;
-    margin-left: 15px;
   }
 
   &__title {
@@ -50,10 +50,10 @@ body {
     max-width: 100px;
 
     @include respond(medium) {
-      max-width: 500px;
-      margin-top: 55px;
       font-size: 30px;
       margin-left: 20px;
+      margin-top: 55px;
+      max-width: 500px;
     }
   }
 
@@ -61,20 +61,20 @@ body {
     display: none;
 
     @include respond(medium) {
-      grid-row: 2;
       display: block;
+      grid-row: 2;
     }
   }
 
   &__menu {
     @include respond(medium) {
       display: flex;
-      gap: 9rem;
-      list-style: none;
-      margin: 0;
-      padding: 0;
       justify-content: center;
+      gap: 9rem;
       font-weight: $font-weight-nav;
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
   }
 
@@ -83,8 +83,8 @@ body {
     text-decoration: none;
 
     &:hover {
-      text-decoration: underline;
       color: $color-secondary;
+      text-decoration: underline;
     }
   }
 }
@@ -95,26 +95,27 @@ body {
 
   &__image {
     @include respond(medium) {
+      overflow: hidden;
       width: 100%;
       height: 400px;
-      overflow: hidden;
     }
 
     img {
-      width: 100%;
       display: block;
+      width: 100%;
+
 
       @include respond(medium) {
+        object-fit: cover;
         height: 100%;
         width: 100%;
-        object-fit: cover;
       }
     }
 
     @include respond(medium) {
       position: relative;
-      width: 100%;
       overflow: visible;
+      width: 100%;
     }
   }
 
@@ -125,12 +126,12 @@ body {
     margin-top: 2rem;
 
     @include respond(medium) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       position: absolute;
       bottom: -2rem;
       left: 50%;
       transform: translateX(-50%);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
     }
   }
 
@@ -138,10 +139,10 @@ body {
     display: flex;
     margin-top: 20px;
     justify-content: center;
-    text-decoration: underline;
-    font-size: 16px;
     color: #36769D;
+    font-size: 16px;
     font-weight: $font-weight-body-bold;
+    text-decoration: underline;
   }
 
   &__text {
@@ -155,26 +156,25 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem 1.2rem;
   border: none;
-  cursor: pointer;
-  margin: 0 auto;
   border-radius: 4px;
+  cursor: pointer;
+  padding: 1.5rem 1.2rem;
+  margin: 0 auto;
   width: 100%;
   max-width: 250px;
 
   @include respond(medium) {
-
-    padding: 0.9rem 0;
     font-size: 1.3rem;
     border-radius: 6px;
+    padding: 0.9rem 0;
     min-width: 290px;
   }
 
   &--primary {
-    font-weight: $font-weight-button;
     background-color: $color-secondary;
     color: $color-primary;
+    font-weight: $font-weight-button;
     text-decoration: none;
   }
 
@@ -185,8 +185,8 @@ body {
       display: inline-flex;
       background-color: $color-accent;
       color: $color-light;
-      text-decoration: none;
       font-weight: $font-weight-button;
+      text-decoration: none;
     }
   }
 }
@@ -205,8 +205,8 @@ body {
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 0.5rem;
-    padding: 1rem;
     border-radius: 8px;
+    padding: 1rem;
     margin: 1rem 0 1rem 0.9rem;
 
     @include respond(medium) {
@@ -216,16 +216,16 @@ body {
 
     @include respond(large) {
       padding: 0;
-      width: 100%;
       margin: 0;
+      width: 100%;
     }
 
     &__image {
       img {
         display: grid;
-        max-width: 73px;
         border-radius: 50%;
         margin-top: 0;
+        max-width: 73px;
 
         @include respond(large) {
           margin-left: 120px;
@@ -247,9 +247,9 @@ body {
       max-width: 100%;
 
       @include respond(medium) {
-        max-width: 509px;
         margin-right: 0;
         margin-left: 0;
+        max-width: 509px;
       }
     }
 
@@ -259,8 +259,8 @@ body {
       margin-top: -20px; // mindre avstånd till citatet
 
       @include respond(medium) {
-        margin-top: -20px;
         font-weight: $font-weight-body-regular;
+        margin-top: -20px;
         width: 210px;
       }
     }
@@ -293,9 +293,9 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
+  max-width: 1200px;
 
   @include respond(medium) {
     grid-template-columns: 1fr 1fr;
@@ -317,12 +317,12 @@ body {
     "button";
   grid-template-columns: 1fr;
   gap: 0.75rem;
+  background: $color-light;
   border: 1px solid #ccc;
   border-radius: 6px;
   overflow: hidden;
-  background: $color-light;
-  max-width: 380px;
   margin: 0 auto;
+  max-width: 380px;
 
   &--hidden-md {
     display: none;
@@ -351,9 +351,9 @@ body {
     grid-area: image;
 
     img {
+      display: block;
       width: 100%;
       height: auto;
-      display: block;
     }
   }
 
@@ -372,11 +372,11 @@ body {
   }
 
   &__participants {
-    font-weight: $font-weight-body-regular;
-    width: 100%;
     color: black;
     font-size: 12px;
+    font-weight: $font-weight-body-regular;
     margin-right: 180px;
+    width: 100%;
 
     @include respond(medium) {
       margin-right: 20px;
@@ -392,17 +392,17 @@ body {
   &__button {
     display: inline-block;
     grid-area: button;
+    text-align: center;
     background-color: $color-accent;
     color: $color-light;
+    font-size: 16px;
+    font-weight: $font-weight-bold;
+    text-decoration: none;
     border: none;
     border-radius: 4px;
-    width: 200px;
     padding: 0.9rem 0;
-    font-weight: 700;
     margin: 0 20px -10px 170px;
-    font-size: 16px;
-    text-decoration: none;
-    text-align: center;
+    width: 200px;
   }
 }
 
@@ -424,15 +424,15 @@ body {
   width: 100%;
 
   &__text {
-    padding: 40px;
     color: $color-light;
     text-align: center;
     font-size: 28px;
+    padding: 40px;
 
     @include respond(medium) {
-      max-width: 632px;
       margin-left: 20%;
       margin-right: 20%;
+      max-width: 632px;
     }
   }
 
@@ -440,25 +440,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px auto;
-    margin-bottom: 0;
+    margin: 20px auto 0;
   }
 
   &__button {
-    border: 2px solid $color-secondary;
-    border-radius: 4px;
-    font-size: 24px;
-    font-weight: 700;
-    background-color: $color-primary;
-    color: $color-secondary;
-    margin-bottom: 80px;
-    max-width: 308px;
-    max-height: 66px;
-    width: 60%;
-    height: auto;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
+    background-color: $color-primary;
+    color: $color-secondary;
+    font-size: 24px;
+    font-weight: $font-weight-button;
+    text-decoration: none;
+    border: 2px solid $color-secondary;
+    border-radius: 4px;
+    margin-bottom: 80px;
+    width: 260px;
+    height: 66px;
   }
 }
 
@@ -472,9 +470,9 @@ body {
   &__image {
     img {
       display: block;
+      margin: 0;
       width: 100%;
       height: auto;
-      margin: 0;
 
       @include respond(xl) {
         max-width: 640px;
@@ -483,11 +481,11 @@ body {
   }
 
   &__content {
-    margin: 24px 18px 10px 20px;
+    margin: 24px 18px 40px 20px;
 
     @include respond(medium) {
-      max-width: 416px;
       margin: 0 auto;
+      max-width: 416px;
     }
 
     @include respond(xl) {
@@ -505,11 +503,12 @@ body {
 
   &__button {
     background-color: $color-accent;
+    color: $color-light;
+    font-size: 24px;
+    font-weight: $font-weight-button;
+    text-decoration: none;
     border: none;
     border-radius: 4px;
-    font-size: 24px;
-    color: $color-light;
-    font-weight: 700;
     padding: 10px 51px;
     cursor: pointer;
   }
@@ -528,13 +527,13 @@ body {
 }
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   background-color: $color-primary;
   color: $color-light;
   font-size: 18px;
   padding: 6rem 0 0 4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
   margin-top: 3rem;
 
   @include respond(medium) {
@@ -556,9 +555,9 @@ body {
   }
 
   &__title {
+    font-size: 1.1em;
     font-weight: $font-weight-title;
     margin-bottom: 0.5rem;
-    font-size: 1.1em;
   }
 
   &__text {

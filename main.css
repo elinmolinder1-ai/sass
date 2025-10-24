@@ -1,15 +1,15 @@
 body {
-  margin: 0;
   background-color: #fff;
   font-family: "Roboto", sans-serif;
+  margin: 0;
 }
 
 @media (min-width: 1280px) {
   .container {
-    max-width: 1280px;
-    margin: 0 auto;
     background-color: #fff;
     padding: 1rem;
+    margin: 0 auto;
+    max-width: 1280px;
   }
 }
 
@@ -17,9 +17,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
   background-color: #011827;
   color: #fff;
+  padding: 1rem;
 }
 @media (min-width: 600px) {
   .header {
@@ -35,9 +35,9 @@ body {
   margin-top: -20px;
 }
 .header__logo {
+  margin-left: 15px;
   width: 100px;
   height: auto;
-  margin-left: 15px;
 }
 .header__title {
   font-size: 1.1rem;
@@ -47,10 +47,10 @@ body {
 }
 @media (min-width: 800px) {
   .header__title {
-    max-width: 500px;
-    margin-top: 55px;
     font-size: 30px;
     margin-left: 20px;
+    margin-top: 55px;
+    max-width: 500px;
   }
 }
 .header__nav {
@@ -58,19 +58,19 @@ body {
 }
 @media (min-width: 800px) {
   .header__nav {
-    grid-row: 2;
     display: block;
+    grid-row: 2;
   }
 }
 @media (min-width: 800px) {
   .header__menu {
     display: flex;
-    gap: 9rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
     justify-content: center;
+    gap: 9rem;
     font-weight: 700;
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 }
 .header__link {
@@ -78,8 +78,8 @@ body {
   text-decoration: none;
 }
 .header__link:hover {
-  text-decoration: underline;
   color: #8ACFE5;
+  text-decoration: underline;
 }
 
 .hero {
@@ -88,27 +88,27 @@ body {
 }
 @media (min-width: 800px) {
   .hero__image {
+    overflow: hidden;
     width: 100%;
     height: 400px;
-    overflow: hidden;
   }
 }
 .hero__image img {
-  width: 100%;
   display: block;
+  width: 100%;
 }
 @media (min-width: 800px) {
   .hero__image img {
+    object-fit: cover;
     height: 100%;
     width: 100%;
-    object-fit: cover;
   }
 }
 @media (min-width: 800px) {
   .hero__image {
     position: relative;
-    width: 100%;
     overflow: visible;
+    width: 100%;
   }
 }
 .hero__cta {
@@ -119,22 +119,22 @@ body {
 }
 @media (min-width: 800px) {
   .hero__cta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     position: absolute;
     bottom: -2rem;
     left: 50%;
     transform: translateX(-50%);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
   }
 }
 .hero__online {
   display: flex;
   margin-top: 20px;
   justify-content: center;
-  text-decoration: underline;
-  font-size: 16px;
   color: #36769D;
+  font-size: 16px;
   font-weight: 700;
+  text-decoration: underline;
 }
 @media (min-width: 800px) {
   .hero__text {
@@ -146,26 +146,26 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem 1.2rem;
   border: none;
-  cursor: pointer;
-  margin: 0 auto;
   border-radius: 4px;
+  cursor: pointer;
+  padding: 1.5rem 1.2rem;
+  margin: 0 auto;
   width: 100%;
   max-width: 250px;
 }
 @media (min-width: 800px) {
   .button {
-    padding: 0.9rem 0;
     font-size: 1.3rem;
     border-radius: 6px;
+    padding: 0.9rem 0;
     min-width: 290px;
   }
 }
 .button--primary {
-  font-weight: 700;
   background-color: #8ACFE5;
   color: #011827;
+  font-weight: 700;
   text-decoration: none;
 }
 .button--secondary {
@@ -176,8 +176,8 @@ body {
     display: inline-flex;
     background-color: #E3170A;
     color: #fff;
-    text-decoration: none;
     font-weight: 700;
+    text-decoration: none;
   }
 }
 
@@ -196,8 +196,8 @@ body {
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 0.5rem;
-  padding: 1rem;
   border-radius: 8px;
+  padding: 1rem;
   margin: 1rem 0 1rem 0.9rem;
 }
 @media (min-width: 800px) {
@@ -209,15 +209,15 @@ body {
 @media (min-width: 1027px) {
   .testimonials .testimonial {
     padding: 0;
-    width: 100%;
     margin: 0;
+    width: 100%;
   }
 }
 .testimonials .testimonial__image img {
   display: grid;
-  max-width: 73px;
   border-radius: 50%;
   margin-top: 0;
+  max-width: 73px;
 }
 @media (min-width: 1027px) {
   .testimonials .testimonial__image img {
@@ -238,9 +238,9 @@ body {
 }
 @media (min-width: 800px) {
   .testimonials .testimonial__quote {
-    max-width: 509px;
     margin-right: 0;
     margin-left: 0;
+    max-width: 509px;
   }
 }
 .testimonials .testimonial__person {
@@ -250,8 +250,8 @@ body {
 }
 @media (min-width: 800px) {
   .testimonials .testimonial__person {
-    margin-top: -20px;
     font-weight: 400;
+    margin-top: -20px;
     width: 210px;
   }
 }
@@ -279,9 +279,9 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
+  max-width: 1200px;
 }
 @media (min-width: 800px) {
   .challenge-list {
@@ -300,12 +300,12 @@ body {
   grid-template-areas: "image" "title" "wrapper" "text" "button";
   grid-template-columns: 1fr;
   gap: 0.75rem;
+  background: #fff;
   border: 1px solid #ccc;
   border-radius: 6px;
   overflow: hidden;
-  background: #fff;
-  max-width: 380px;
   margin: 0 auto;
+  max-width: 380px;
 }
 .challenge-card--hidden-md {
   display: none;
@@ -333,9 +333,9 @@ body {
   grid-area: image;
 }
 .challenge-card__image img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
 }
 .challenge-card__wrapper {
   grid-area: wrapper;
@@ -350,11 +350,11 @@ body {
   font-size: 1.5rem;
 }
 .challenge-card__participants {
-  font-weight: 400;
-  width: 100%;
   color: black;
   font-size: 12px;
+  font-weight: 400;
   margin-right: 180px;
+  width: 100%;
 }
 @media (min-width: 800px) {
   .challenge-card__participants {
@@ -369,17 +369,17 @@ body {
 .challenge-card__button {
   display: inline-block;
   grid-area: button;
+  text-align: center;
   background-color: #E3170A;
   color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
   border: none;
   border-radius: 4px;
-  width: 200px;
   padding: 0.9rem 0;
-  font-weight: 700;
   margin: 0 20px -10px 170px;
-  font-size: 16px;
-  text-decoration: none;
-  text-align: center;
+  width: 200px;
 }
 
 .promo__buttons {
@@ -399,40 +399,38 @@ body {
   width: 100%;
 }
 .article__text {
-  padding: 40px;
   color: #fff;
   text-align: center;
   font-size: 28px;
+  padding: 40px;
 }
 @media (min-width: 800px) {
   .article__text {
-    max-width: 632px;
     margin-left: 20%;
     margin-right: 20%;
+    max-width: 632px;
   }
 }
 .article__wrapper__button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px auto;
-  margin-bottom: 0;
+  margin: 20px auto 0;
 }
 .article__button {
-  border: 2px solid #8ACFE5;
-  border-radius: 4px;
-  font-size: 24px;
-  font-weight: 700;
-  background-color: #011827;
-  color: #8ACFE5;
-  margin-bottom: 80px;
-  max-width: 308px;
-  max-height: 66px;
-  width: 60%;
-  height: auto;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+  background-color: #011827;
+  color: #8ACFE5;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid #8ACFE5;
+  border-radius: 4px;
+  margin-bottom: 80px;
+  width: 260px;
+  height: 66px;
 }
 
 @media (min-width: 800px) {
@@ -444,9 +442,9 @@ body {
 }
 .promo-section__image img {
   display: block;
+  margin: 0;
   width: 100%;
   height: auto;
-  margin: 0;
 }
 @media (min-width: 1280px) {
   .promo-section__image img {
@@ -454,12 +452,12 @@ body {
   }
 }
 .promo-section__content {
-  margin: 24px 18px 10px 20px;
+  margin: 24px 18px 40px 20px;
 }
 @media (min-width: 800px) {
   .promo-section__content {
-    max-width: 416px;
     margin: 0 auto;
+    max-width: 416px;
   }
 }
 @media (min-width: 1280px) {
@@ -475,11 +473,12 @@ body {
 }
 .promo-section__button {
   background-color: #E3170A;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
   border: none;
   border-radius: 4px;
-  font-size: 24px;
-  color: #fff;
-  font-weight: 700;
   padding: 10px 51px;
   cursor: pointer;
 }
@@ -493,13 +492,13 @@ body {
 }
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   background-color: #011827;
   color: #fff;
   font-size: 18px;
   padding: 6rem 0 0 4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
   margin-top: 3rem;
 }
 @media (min-width: 800px) {
@@ -520,9 +519,9 @@ body {
   }
 }
 .footer__title {
+  font-size: 1.1em;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  font-size: 1.1em;
 }
 .footer__text {
   line-height: 1.5;
