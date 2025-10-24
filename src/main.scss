@@ -67,7 +67,6 @@ body {
   }
 
   &__menu {
-
     @include respond(medium) {
       display: flex;
       gap: 9rem;
@@ -287,12 +286,10 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 
-
   @include respond(xl) {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
   }
-
 }
 
 .challenge-card {
@@ -327,7 +324,6 @@ body {
       display: grid;
     }
   }
-
 
   &__title {
     grid-area: title;
@@ -390,10 +386,7 @@ body {
     margin: 0 20px 0 170px;
     font-size: 16px;
   }
-
-
 }
-
 
 .promo {
   &__buttons {
