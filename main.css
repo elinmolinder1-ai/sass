@@ -102,14 +102,14 @@ body {
     overflow: visible;
   }
 }
-.hero__buttons {
+.hero__cta {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   margin-top: 2rem;
 }
 @media (min-width: 800px) {
-  .hero__buttons {
+  .hero__cta {
     position: absolute;
     bottom: -2rem;
     left: 50%;
@@ -120,6 +120,7 @@ body {
 }
 .hero__online {
   display: flex;
+  margin-top: 20px;
   justify-content: center;
   text-decoration: underline;
   font-size: 16px;
@@ -201,14 +202,15 @@ body {
   }
 }
 .testimonials .testimonial__image img {
+  display: grid;
   max-width: 73px;
   border-radius: 50%;
-  display: inline-block;
-  margin-top: -20px;
+  margin-top: 0;
 }
 @media (min-width: 1027px) {
   .testimonials .testimonial__image img {
-    margin-left: 90px;
+    margin-left: 120px;
+    margin-top: 1px;
   }
 }
 .testimonials .testimonial__content {
@@ -217,14 +219,13 @@ body {
 .testimonials .testimonial__quote {
   grid-area: 1;
   font-style: italic;
-  font-size: 24px;
+  font-size: 22px;
   margin-right: 10px;
   margin-left: 10px;
   max-width: 100%;
 }
 @media (min-width: 800px) {
   .testimonials .testimonial__quote {
-    margin-bottom: 1rem;
     max-width: 509px;
     margin-right: 0;
     margin-left: 0;
@@ -233,12 +234,13 @@ body {
 .testimonials .testimonial__person {
   font-size: 0.85rem;
   color: #555;
-  margin-top: 0;
+  margin-top: -20px;
 }
 @media (min-width: 800px) {
   .testimonials .testimonial__person {
-    margin: 0;
+    margin-top: -20px;
     font-weight: 400;
+    width: 210px;
   }
 }
 .testimonials .testimonial--hidden-md {

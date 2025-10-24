@@ -31,7 +31,7 @@
         <h1 class="header__title">Hacker Escape Rooms</h1>
       </div>
 
-      <nav class="header__nav">
+      <nav class="header__nav" aria-label="Main navigation">
         <ul class="header__menu">
           <li class="header__item"><a href="#" class="header__link">Play online</a></li>
           <li class="header__item"><a href="#" class="header__link">Play on-site</a></li>
@@ -46,14 +46,14 @@
         <div class="hero__image">
           <img src="images/personHacker.png" alt="Person hacking at computer">
 
-          <div class="hero__buttons">
-            <button class="button button--secondary">Online challenges</button>
-            <button class="button button--primary">On-site challenges</button>
+          <div class="hero__cta">
+            <a href="#" class="button button--secondary">Online challenges</a>
+            <a href="#" class="button button--primary">On-site challenges</a>
           </div>
         </div>
 
         <div class="hero__text">
-          <p class="hero__online">Online challenges</p>
+          <a href="#" class="hero__online">Online challenges</a>
         </div>
       </section>
 
@@ -66,9 +66,9 @@
             <blockquote class="testimonial__quote">
               "This is a quote about how amazing this place is and how much fun me and my friends had when we tried it"
             </blockquote>
-            <p class="testimonial__person">
-              John Doe, visited us in September 2021
-            </p>
+            <footer class="testimonial__person">
+               John Doe, visited us in September 2021
+            </footer>
           </div>
         </article>
 
@@ -80,10 +80,9 @@
             <blockquote class="testimonial__quote">
               "This is a quote about how amazing this place is and how much fun me and my friends had when we tried it"
             </blockquote>
-            <p class="testimonial__person">
-              John Doe, visited us in September 2021
-            </p>
-          </div>
+            <footer class="testimonial__person">
+               John Doe, visited us in September 2021
+            </footer>
         </article>
       </section>
 
@@ -92,8 +91,7 @@
           <h2>Popular challenges right now</h2>
         </div>
 
-        <section class="challenge-list">
-
+        <div class="challenge-list">
           <article class="challenge-card">
             <h2 class="challenge-card__title">Title of room (on-site)</h2>
             <div class="challenge-card__image">
@@ -244,7 +242,7 @@
         </p>
       </div>
 
-      <div class="footer__section--primary">
+      <div class="footer__section footer__section--primary">
         <h2 class="footer__title">Site map</h2>
         <ul class="footer__list">
           <li><a href="#">The Story</a></li>
