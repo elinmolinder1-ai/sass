@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background-color: #fff;
   font-family: "Roboto", sans-serif;
@@ -31,15 +32,15 @@ body {
   }
 }
 .header__toggle {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+  position: relative;
+  top: -1rem;
+  right: 0.1rem;
   width: 3.6rem;
   height: 2rem;
-  display: flex;
+  /*display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 6px;
+  justify-content: center; // ändrat
+  gap: 2px;*/
   cursor: pointer;
   z-index: 1001;
   background-color: #011827;
@@ -51,22 +52,34 @@ body {
   }
 }
 .header__toggle span {
-  display: block;
-  height: 4.3px;
-  width: 100%;
-  transform-origin: center;
-  background-color: #fff;
-  border-radius: 3px;
-  transition: all 0.3s ease;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 6px;
+  border-radius: 10px;
+  background: #fff;
+}
+.header__toggle span:nth-child(1) {
+  top: 0;
+}
+.header__toggle span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header__toggle span:nth-child(3) {
+  bottom: 0;
 }
 .header__toggle.open span:nth-child(1) {
-  transform: rotate(45deg) translate(15px, 10px);
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
 }
 .header__toggle.open span:nth-child(2) {
   opacity: 0;
 }
 .header__toggle.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, 0px);
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
 }
 .header__nav {
   position: fixed;
