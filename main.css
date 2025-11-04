@@ -54,18 +54,19 @@ body {
   display: block;
   height: 4.3px;
   width: 100%;
+  transform-origin: center;
   background-color: #fff;
   border-radius: 3px;
   transition: all 0.3s ease;
 }
 .header__toggle.open span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(15px, 10px);
 }
 .header__toggle.open span:nth-child(2) {
   opacity: 0;
 }
 .header__toggle.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(5px, 0px);
 }
 .header__nav {
   position: fixed;

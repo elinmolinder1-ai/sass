@@ -8,8 +8,6 @@ body {
 }
 
 .container {
-
-
   @include respond(xl) {
     background-color: $color-light;
     padding: 1rem;
@@ -35,42 +33,46 @@ body {
   }
 
   &__toggle {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 3.6rem;
-  height: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; // ändrat
-  gap: 6px;                // nytt
-  cursor: pointer;
-  z-index: 1001;
-  background-color: $color-primary;
-  border:none; 
-   @include respond(medium) {
-    display: none; // göm på desktop
-  }
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 3.6rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // ändrat
+    gap: 6px; // nytt
+    cursor: pointer;
+    z-index: 1001;
+    background-color: $color-primary;
+    border: none;
+
+    @include respond(medium) {
+      display: none; // göm på desktop
+    }
+
     span {
-    display: block;
-    height: 4.3px;
-    width: 100%;
+      display: block;
+      height: 4.3px;
+      width: 100%;
+  transform-origin: center; // NYTT
+      background-color: $color-light;
+      border-radius: 3px; // rundade kanter
+      transition: all 0.3s ease;
+    }
 
-    background-color: $color-light; 
-    border-radius: 3px;  // rundade kanter
-    transition: all 0.3s ease;
-  }
+    &.open span:nth-child(1) {
+      transform: rotate(45deg) translate(15px, 10px);
+    }
 
-  &.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  &.open span:nth-child(2) {
-    opacity: 0;
-  }
-  &.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-  
+    &.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, 0px);
+    }
+
   }
 
   &__nav {
