@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   background-color: #fff;
   font-family: "Roboto", sans-serif;
@@ -35,47 +34,75 @@ body {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  width: 2rem;
+  width: 3.6rem;
   height: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 6px;
   cursor: pointer;
   z-index: 1001;
-  font-size: 50px;
+  background-color: #011827;
+  border: none;
 }
-.header__toggle::before {
-  content: "☰";
+@media (min-width: 800px) {
+  .header__toggle {
+    display: none;
+  }
 }
-.header__toggle.open::before {
-  content: "✕";
+.header__toggle span {
+  display: block;
+  height: 4.3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.header__toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.header__toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.header__toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 .header__nav {
   position: fixed;
   top: 0;
-  left: 10px;
-  right: 10px;
+  left: 25px;
+  right: 25px;
   height: 90vh;
   background: #011827;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  transition: transform 0.3s cubic-bezier(0.12, 0, 0.39, 0);
 }
 .header__nav.open {
   display: flex;
   font-size: 30px;
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
 }
 @media (min-width: 800px) {
   .header__nav {
     display: block;
     grid-row: 2;
-    background: none;
     padding: 0;
     position: static;
     height: auto;
     width: auto;
     background: none;
+    font-size: 15px;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
   }
 }
 .header__menu {
@@ -84,15 +111,14 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  text-align: center;
+  gap: 5rem;
+  font-weight: 700;
 }
 @media (min-width: 800px) {
   .header__menu {
     flex-direction: row;
     justify-content: center;
     gap: 9rem;
-    font-weight: 700;
   }
 }
 .header__item {

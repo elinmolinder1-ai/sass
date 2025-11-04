@@ -8,6 +8,8 @@ body {
 }
 
 .container {
+
+
   @include respond(xl) {
     background-color: $color-light;
     padding: 1rem;
@@ -33,51 +35,80 @@ body {
   }
 
   &__toggle {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    z-index: 1001; // ovanpå menyn
-    font-size: 50px;
-&::before{
-  content: "☰";
-}
-&.open::before{
-  content: "✕";
-}
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 3.6rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; // ändrat
+  gap: 6px;                // nytt
+  cursor: pointer;
+  z-index: 1001;
+  background-color: $color-primary;
+  border:none; 
+   @include respond(medium) {
+    display: none; // göm på desktop
+  }
+    span {
+    display: block;
+    height: 4.3px;
+    width: 100%;
+
+    background-color: $color-light; 
+    border-radius: 3px;  // rundade kanter
+    transition: all 0.3s ease;
+  }
+
+  &.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  &.open span:nth-child(2) {
+    opacity: 0;
+  }
+  &.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
   }
 
   &__nav {
     position: fixed; // ligger ovanpå allt
     top: 0;
-    left: 10px;
-    right: 10px;
+    left: 25px;
+    right: 25px;
     height: 90vh;
     background: $color-primary;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    opacity: 0;
+    transform: scale(0.95); // lite mindre
+    pointer-events: none; // går inte att klicka
+    transition: transform 0.3s cubic-bezier(0.12, 0, 0.39, 0);
 
     &.open {
       display: flex;
       font-size: 30px;
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: auto;
     }
 
     @include respond(medium) {
-      display: block; // alltid synlig på desktop
+      display: block;
       grid-row: 2;
-      background: none;
       padding: 0;
       position: static;
       height: auto;
       width: auto;
       background: none;
+      font-size: 15px;
+      opacity: 1;
+      pointer-events: auto;
+      transform: none;
     }
   }
 
@@ -87,14 +118,15 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    text-align: center;
+    gap: 5rem;
+
+    font-weight: $font-weight-nav;
 
     @include respond(medium) {
       flex-direction: row; // tillbaka till horisontell layout på desktop
       justify-content: center;
       gap: 9rem;
-      font-weight: $font-weight-nav;
+
     }
   }
 
@@ -111,7 +143,8 @@ body {
   &__link {
     color: $color-light;
     text-decoration: none;
-transition: color 0.3s;
+    transition: color 0.3s;
+
     &:hover {
       color: $color-secondary;
       text-decoration: underline;
@@ -143,8 +176,8 @@ transition: color 0.3s;
       max-width: 500px;
     }
   }
-
 }
+
 
 .hero {
   display: flex;
@@ -251,6 +284,7 @@ transition: color 0.3s;
 .testimonials {
   display: grid;
   grid-template-columns: 1fr;
+
 
   @include respond(medium) {
     grid-template-columns: 1fr 1fr;
