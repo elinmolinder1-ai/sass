@@ -8,15 +8,24 @@ for (let i = 0; i < 3; i++) {
   toggleBtn.appendChild(document.createElement('span'));
 }
 
+
+
 const nav = document.createElement('nav');
 nav.className = 'header__nav';
 
+
+
+const overlay = document.createElement("div");
+overlay.className= "menu-overlay";
+
 header.appendChild(toggleBtn);
 header.appendChild(nav);
+header.appendChild(overlay);
 
 toggleBtn.addEventListener('click', () => {
   toggleBtn.classList.toggle('open');
   nav.classList.toggle('open')
+  overlay.classList.toggle('visible');
 });
 
 const headerMenu = document.createElement('ul');
@@ -33,3 +42,4 @@ headerMenu.className = 'header__menu';
   headerMenu.appendChild(li);
 });
 nav.appendChild(headerMenu);
+

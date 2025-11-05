@@ -84,7 +84,7 @@ body {
     position: fixed; // ligger ovanpå allt
     top: 0;
     left: 25px;
-    right: 25px;
+    right: 15px;
     height: 90vh;
     background: $color-primary;
     display: flex;
@@ -185,7 +185,24 @@ body {
   }
 }
 
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(228, 221, 221, 0.6); /* semitransparent svart */
+  z-index: 500; /* lägre än nav */
+  opacity: 0;
+  pointer-events: none; /* låter klick gå igenom */
+  transition: opacity 0.3s ease;
+}
 
+.menu-overlay.visible {
+  opacity: 1;
+
+   pointer-events: all;
+}
 .hero {
   display: flex;
   flex-direction: column;
