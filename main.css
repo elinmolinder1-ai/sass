@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   background-color: #fff;
   font-family: "Roboto", sans-serif;
@@ -34,13 +33,9 @@ body {
 .header__toggle {
   position: relative;
   top: -1rem;
-  right: 0.1rem;
+  right: 0.6rem;
   width: 3.6rem;
   height: 2rem;
-  /*display: flex;
-  flex-direction: column;
-  justify-content: center; // ändrat
-  gap: 2px;*/
   cursor: pointer;
   z-index: 1001;
   background-color: #011827;
@@ -120,13 +115,13 @@ body {
   }
 }
 .header__menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 5rem;
   font-weight: 700;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 @media (min-width: 800px) {
   .header__menu {
@@ -136,13 +131,13 @@ body {
   }
 }
 .header__item {
-  width: 100%;
   text-align: center;
+  width: 100%;
 }
 @media (min-width: 800px) {
   .header__item {
-    width: auto;
     text-align: left;
+    width: auto;
   }
 }
 .header__link {
@@ -161,8 +156,8 @@ body {
 }
 .header__logo {
   margin-left: 15px;
-  width: 100px;
   height: auto;
+  width: 100px;
 }
 .header__title {
   font-size: 1.1rem;
@@ -177,6 +172,25 @@ body {
     margin-top: 55px;
     max-width: 500px;
   }
+}
+
+.header::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(226, 226, 226, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 500;
+}
+
+.header.open::before {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .hero {
@@ -226,12 +240,12 @@ body {
 }
 .hero__online {
   display: flex;
-  margin-top: 20px;
   justify-content: center;
-  color: #36769D;
   font-size: 16px;
   font-weight: 700;
   text-decoration: underline;
+  color: #36769D;
+  margin-top: 20px;
 }
 @media (min-width: 800px) {
   .hero__text {
