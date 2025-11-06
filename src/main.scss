@@ -33,45 +33,56 @@ body {
     grid-template-rows: auto auto;
     justify-content: center;
   }
-
   &__toggle {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 3.6rem;
-  height: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; // ändrat
-  gap: 6px;                // nytt
-  cursor: pointer;
-  z-index: 1001;
-  background-color: $color-primary;
-  border:none; 
-   @include respond(medium) {
-    display: none; // göm på desktop
-  }
-    span {
-    display: block;
-    height: 4.3px;
-    width: 100%;
+    position: relative;
+    top: -1rem;
+    right: 0.1rem;
+    width: 3.6rem;
+    height: 2rem;
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center; // ändrat
+    gap: 2px;*/
+    cursor: pointer;
+    z-index: 1001;
+    background-color: $color-primary;
+    border: none;
 
-    background-color: $color-light; 
-    border-radius: 3px;  // rundade kanter
-    transition: all 0.3s ease;
+    @include respond(medium) {
+      display: none; // göm på desktop
+    }
+ span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 6px;
+    border-radius: 10px;
+    background: $color-light;
   }
+
+  span:nth-child(1) { top: 0; }
+  span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+  span:nth-child(3) { bottom: 0; }
 
   &.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
   }
+
   &.open span:nth-child(2) {
     opacity: 0;
   }
+
   &.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
   }
-  
+
   }
+
+
+
 
   &__nav {
     position: fixed; // ligger ovanpå allt
