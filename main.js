@@ -8,12 +8,8 @@ for (let i = 0; i < 3; i++) {
   toggleBtn.appendChild(document.createElement('span'));
 }
 
-
-
 const nav = document.createElement('nav');
 nav.className = 'header__nav';
-
-
 
 const overlay = document.createElement("div");
 overlay.className= "menu-overlay";
